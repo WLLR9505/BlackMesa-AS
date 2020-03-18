@@ -1,0 +1,54 @@
+body {
+    color: #b1b39f;
+    background-color: #4c5844;
+    font-family: Arial;
+    font-weight: lighter;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    display: grid;
+}
+
+#app {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+textarea {
+    border-top: #25301f;
+    border-left: #25301f;
+    border-right: #85907f;
+    border-bottom: #85907f;
+    border-style: solid;
+    border-width: 2px;
+    color: white;
+    background-color: #3e4637;
+}
+
+button {
+    width: 100px;
+    border-top: #889480;
+    border-left: #889480;
+    border-right: #25311d;
+    border-bottom: #25311d;
+    border-style: solid;
+    border-width: 2px;
+    background-color: #505948;
+}
+button:hover {
+    outline: 1px solid black;
+}
+
+button:active {
+    color: #96882f;
+    border-top: #25311d;
+    border-left: #25311d;
+    border-right: #889480;
+    border-bottom: #889480;
+    border-style: solid;
+    border-width: 2px;
+    background-color: #505948;
+}

@@ -5,18 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Black Mesa Annoucement System</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <textarea id="input"></textarea>
-    <button onclick="play()">play</button>
-    <br>
-    <audio id="currentSound" src=""></audio>
-    <input type="radio" id="vox1" name="vox" value="vox1">
-    <label for="vox1">vox1</label><br>
-    <input type="radio" id="vox2" name="vox" value="vox2">
-    <label for="vox2">vox2</label><br>
-    <script src="./src/index.js"></script>
+    <span id="app">
+        <textarea id="input"></textarea>
+        <button onclick="play()">play</button>
+        <audio id="currentSound" src=""></audio>
+        <span id="radios">
+            <input type="radio" id="vox1" name="vox" value="vox1">
+            <label for="vox1">vox1</label>
+            <input type="radio" id="vox2" name="vox" value="vox2">
+            <label for="vox2">vox2</label>
+        </span>
+        <script src="./src/index.js"></script>
+    </span>
 </body>
 
 </html>

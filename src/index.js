@@ -5,7 +5,6 @@ var i = 0;
 voxlist = document.getElementsByName('vox');
 var soundList, vox;
 
-
 function play() {
     vox = voxlist[0].checked ? 'vox' : 'vox2';
     soundList = soundName.value.split(' ');
