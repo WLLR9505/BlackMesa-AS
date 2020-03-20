@@ -17,13 +17,16 @@ body {
     justify-content: center;
 }
 
-textarea {
+canvas, textarea {
     border-top: #25301f;
     border-left: #25301f;
     border-right: #85907f;
     border-bottom: #85907f;
     border-style: solid;
     border-width: 2px;
+}
+
+textarea {
     color: white;
     background-color: #3e4637;
 }
