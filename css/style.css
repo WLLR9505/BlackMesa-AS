@@ -13,8 +13,48 @@ body {
 
 #app {
     display: grid;
-    align-content: center;
-    justify-content: center;
+    align-self: center;
+    justify-self: center;
+    grid-template-rows: 10% 90%;
+    height: 50%;
+    width: 50%;
+}
+
+.item-menu {
+    background-color: #4c5844;
+    border-top: #889480;
+    border-left: #889480;
+    border-right: #25311d;
+    padding: 2%;
+    border-style: solid solid none solid;
+    border-width: 2px;
+}
+
+#Settings {
+    display: none;
+}
+
+#Window {
+    background-color: #4c5844;
+    display: grid;
+    border-top: #889480;
+    border-left: #889480;
+    border-right: #25311d;
+    border-bottom: #25311d;
+    border-style: solid;
+    border-width: 2px;
+    z-index: 2;
+}
+
+#menu {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 3px;
+}
+
+canvas {
+    height: 20%;
 }
 
 canvas, textarea {
@@ -24,6 +64,11 @@ canvas, textarea {
     border-bottom: #85907f;
     border-style: solid;
     border-width: 2px;
+    width: 90%;
+}
+
+canvas, textarea, button {
+    margin: 5% 5% 0 5%;
 }
 
 textarea {

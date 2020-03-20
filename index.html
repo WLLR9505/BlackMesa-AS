@@ -9,16 +9,30 @@
 </head>
 
 <body>
+ 
     <span id="app">
-        <textarea id="input"></textarea>
-        <button onclick="play()">play</button>
-        <canvas id="waves-sound"></canvas>
-        <span id="radios">
-            <input type="radio" id="vox1" name="vox" value="vox1" checked="true">
-            <label for="vox1">vox1</label>
-            <input type="radio" id="vox2" name="vox" value="vox2">
-            <label for="vox2">vox2</label>
+        <span id="menu">
+            <span class="item-menu" onclick="showWindow(this)">BMAS</span>
+            <span class="item-menu" onclick="showWindow(this)">Settings</span>
         </span>
+
+        <span id="Window">
+            <span id="BMAS">
+                <textarea id="input"></textarea>
+                <canvas id="waves-sound"></canvas>
+                <button onclick="play()">play</button>
+            </span>
+    
+            <span id="Settings">
+                <span id="radios">
+                    <input type="radio" id="vox1" name="vox" value="vox1" checked="true">
+                    <label for="vox1">vox1</label>
+                    <input type="radio" id="vox2" name="vox" value="vox2">
+                    <label for="vox2">vox2</label>
+                </span>
+            </span>
+        </span>
+
         <script src="./src/index.js"></script>
     </span>
 </body>

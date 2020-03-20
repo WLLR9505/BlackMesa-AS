@@ -5,10 +5,11 @@ voxlist = document.getElementsByName('vox');
 var soundList, vox, audioCTX, analyser, source, bufferLength, dataArray;
 
 let canvas = document.getElementById('waves-sound');
-let WIDTH = canvas.width = window.innerWidth / 2;
-let HEIGHT = canvas.height = window.innerHeight / 3;
+let WIDTH = canvas.width;
+let HEIGHT = canvas.height;
 
 let sliceWidth = WIDTH * 1.0 / bufferLength;
+const SPECIALCHARS = ['.', ',', '!', '?', ':'];
 
 canvasCtx = canvas.getContext('2d');
 canvasCtx.fillStyle = '#3e4637';
@@ -54,7 +55,13 @@ function oscilloscope() {
 
 function play() {
     vox = voxlist[0].checked ? 'vox' : 'vox2';
-    soundList = soundName.value.split(' ');
+    soundList = soundName.value;
+    for (let i = 0; i < SPECIALCHARS.length; i++) {
+        soundList = soundList.replace(SPECIALCHARS[i], '');
+    }
+    console.log(soundList);
+    
+    soundList = soundList.split(' ');
     startAnnoucement();
 }
 
@@ -76,4 +83,27 @@ function next() {
         i++;
     }
     play();
+}
+
+function showWindow(target) {
+    let BMAS = document.getElementById('BMAS');
+    let Settings = document.getElementById('Settings');
+    let menu = document.getElementsByClassName('item-menu');
+
+    if (target.innerText == 'BMAS') {
+        BMAS.style.display = 'block';
+        Settings.style.display = 'none';
+        menu[0].style.color = '#96882f';
+        menu[1].style.color = '#b1b39f';
+        menu[0].style.zIndex = 3;
+        menu[1].style.zIndex = 1;
+
+    } else {
+        Settings.style.display = 'block';
+        BMAS.style.display = 'none';
+        menu[1].style.color = '#96882f';
+        menu[0].style.color = '#b1b39f';
+        menu[1].style.zIndex = 3;
+        menu[0].style.zIndex = 1;
+    }
 }
